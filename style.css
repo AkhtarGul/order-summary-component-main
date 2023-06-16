@@ -1,0 +1,179 @@
+:root {
+    --ff: 'Red Hat Display', sans-serif;
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-900: 900;
+    --fsize: 16px;
+    /*primary*/
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    /*Neutral*/
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Darkblue: hsl(223, 47%, 23%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--ff);
+}
+
+/*
+    5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*
+    7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+.text__title {
+    font-family: var(--ff);
+    font-weight: var(--fw-900);
+    font-size: 18px;
+    font-weight: var(--fw-900);
+}
+
+
+main {
+    display: grid;
+    align-content: center;
+    height: 100vh;
+    justify-content: center;
+    background: url('./images/pattern-background-desktop.svg');
+    background-repeat: no-repeat;
+    background-color: var(--Pale-blue);
+}
+
+.container {
+    background-color: white;
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+    border-radius: 0.5em;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+        box-shadow: 5px 5px 15px -4px rgba(0, 0, 255, .2)
+}
+
+.flex__group {
+    display: flex;
+    line-height: 1.4;
+    gap: 0.8em;
+    align-items: center;
+}
+
+.price__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--Very-pale-blue);
+    padding: 0.5em;
+    margin: 1em auto;
+    width: 80%;
+    border-radius: 0.3rem;
+}
+
+.price__color {
+    color: var(--Darkblue);
+    font-weight: var(--fw-700);
+}
+
+.flex__price {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+.price__amount {
+    color: var(--Desaturated-blue);
+    line-height: 1em;
+}
+
+button {
+    border: none;
+    color: white;
+    background-color: var(--Bright-blue);
+    width: 80%;
+    padding: .3em;
+    border-radius: .5em;
+box-shadow: 5px 5px 11px 2px rgba(0, 0, 255, .2);
+}
+
+.link {
+    color: var(--Desaturated-blue);
+    margin-bottom: 2em;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.text__description {
+    width: 89%;
+    margin: 3px auto;
+    color: var(--Desaturated-blue);
+
+}
+
+.music__image {
+    height: 35px;
+    width: 35px;
+}
+
+button:hover{
+    background: var(--Desaturated-blue);
+    pointer-events: auto;
+
+}
+
+@media (max-width:375px){
+    .container {
+        background-color: white;
+        overflow: hidden;
+        text-align: center;
+        width: 340px;
+        border-radius: 0.5em;
+        gap: 23px;
+        display: flex;
+        flex-direction: column;
+            box-shadow: 5px 5px 15px -4px rgba(0, 0, 255, .2)
+    }
+}
